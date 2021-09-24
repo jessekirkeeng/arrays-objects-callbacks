@@ -34,7 +34,7 @@ var arr = [40,50,60];
 */
 
 function last (arr){
-  return arr[2]
+  return arr[arr.length - 1]
 };
 
 
@@ -52,8 +52,7 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 
 function looper (family){
   for(let i = 0; i < family.length; i++){
-    // alert(i)
-  
+    alert(i)
   }
 };
 
@@ -71,7 +70,9 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 function reversedLooper (letters) {
-
+  for(let i = 4; i < letters.length; i--){
+    alert(i)
+  }
 }
 
 
@@ -88,20 +89,17 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 function evenFinder (nums) {
-
+  let evenArray = []
+  for (let i = 0; i < nums.length; i++) {
+    if (i % 2 === 0){
+      evenArray.push(i)
+    }
+}return evenArray
 }
-
-
-
-
 
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
-
-
-
-
 
 
 
@@ -117,7 +115,17 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+let divider = function (numbersArray){
+  let evenArray = []
+  let oddsArray = []
+  let newArr = [evenArray, oddsArray]
+  for (let i = 0; i < numbersArray.length; i++) {
+    if (i % 2 === 0){
+      evenArray.push(i)
+    }
+    else {oddsArray.push(i)}
+}
+return newArr}
 
 
 
@@ -139,8 +147,16 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
-
+let finder = function(nums){
+  let randomNumber = getRandomArbitrary()
+  for (let i = 0; i < nums.length; i++){
+    if (nums[i] === randomNumber ){
+      return true
+    } else {
+        return false
+    }
+  }
+}
 
 
 ////////// PROBLEM 8 //////////
@@ -168,8 +184,16 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
-
+// let removeItem = function(myGroceryList, item){
+//   for (let i = 0; i < item.length; i++)
+//     for (let j = 0; j < myGroceryList.length; j++){
+//       if (item[i] === myGroceryList[j]){
+//         return [i]
+//       }
+//     }
+//   }
+// let addItem = function(myGroceryList, item){
+// }
 
 
 ////////// PROBLEM 9 //////////
@@ -178,7 +202,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+let maker = function(){
+  let arr = []
+  // for (var i = 0; i = 215; i++) {
+  //   arr.push(i);
+  // }
+  arr.from(arr(215))
+  return arr
+}
 
 
 
@@ -194,7 +225,12 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+let addTen = function (numbers){
+  let plusTen = []
+  for (var i = 0; i = numbers.length; i++){
+    return plusTen.push(numbers[i] + 10)
+  }
+}
 
 
 
@@ -219,7 +255,11 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-//Code Here
+let longer = function (arr1, arr2){
+  // arr2.filter(val => !arr1.includes(val));
+  let result = (arr2).not(arr1).get()
+  return result
+}
 
 
 
@@ -231,7 +271,9 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+let both = function (arr1, arr2){
+  
+}
 
 
 
